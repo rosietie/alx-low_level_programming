@@ -1,2 +1,8 @@
 #!/bin/bash
-gcc -E $CFILE -o c
+
+CFILE="your_c_file.c"
+OUTPUT_FILE="output.c"
+
+# Run the C file through the preprocessor
+cpp -P "$CFILE" -o "$OUTPUT_FILE"
+
