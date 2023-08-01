@@ -1,12 +1,19 @@
 #include "main.h"
+#include <stdio.h>
 /**
-* set_string - entry point
-* @s: pointer to pointer
-* @to: charater variable
-* Return: Void
+* _strchr - Function to be executed
+* @s: input string
+* @c: occurence of character
+* Return: NULL
 */
-
-void set_string(char **s, char *to)
+char *_strchr(char *s, char c)
 {
-	*s = to;
+	int i;
+
+	for (i = 0; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
+			return (s + i);
+	}
+	return (NULL);
 }
